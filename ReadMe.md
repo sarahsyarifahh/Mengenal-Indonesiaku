@@ -19,6 +19,7 @@ Font: BalooTammudu2-Bold.ttf: Copyright 2019 The Baloo 2 Project Authors
 (https://github.com/EkType/Baloo2)
 
 Sound: mixkit-video-game-win-2016.wav by Mixkit.co
+https://mixkit.co/free-sound-effects
 
 Sound: mixkit-musical-game-over-959.wav by Mixkit.co
 https://mixkit.co/free-sound-effects
