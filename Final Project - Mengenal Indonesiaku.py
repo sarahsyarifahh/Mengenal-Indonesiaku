@@ -81,26 +81,6 @@ lose_sound = pygame.mixer.Sound("endscreen/mixkit-musical-game-over-959.wav")
 
 ####################################### GAME SCREEN   : RUN THE CODE #######################################
 
-# Load background and category buttons
-def draw_mainmenu():
-    SCREEN.fill((WHITE))
-    SCREEN.blit(bghome, (0,0))
-    SCREEN.blit(B_Makanan, (95,332))
-    SCREEN.blit(B_Permainan, (276,332))
-    SCREEN.blit(B_Pahlawan, (95,400))
-    SCREEN.blit(B_Ibukota, (276,400))
-    mouse = pygame.mouse.get_pos()
-    if 95+136 > mouse[0] > 95 and 332+40 > mouse[1] > 332:
-        SCREEN.blit(C_Makanan, (95,332))
-    if 276+136 > mouse[0] > 276 and 332+40 > mouse[1] > 332:
-        SCREEN.blit(C_Permainan, (276,332))
-    if 95+136 > mouse[0] > 95 and 400+40 > mouse[1] > 400:
-        SCREEN.blit(C_Pahlawan, (95,400))
-    if 276+136 > mouse[0] > 276 and 400+40 > mouse[1] > 400:
-        SCREEN.blit(C_Ibukota, (276,400))      
-    
-    pygame.display.update()
-
 
 ################ Category A: MAKANAN ################
 # Load word guess
@@ -405,6 +385,29 @@ def game_d():
 
 ####################################### TITLE SCREEN  : RUN THE CODE #######################################
 
+
+
+# Load background and category buttons
+def draw_mainmenu():
+    SCREEN.fill((WHITE))
+    SCREEN.blit(bghome, (0,0))
+    SCREEN.blit(B_Makanan, (95,332))
+    SCREEN.blit(B_Permainan, (276,332))
+    SCREEN.blit(B_Pahlawan, (95,400))
+    SCREEN.blit(B_Ibukota, (276,400))
+    mouse = pygame.mouse.get_pos()
+    if 95+136 > mouse[0] > 95 and 332+40 > mouse[1] > 332:
+        SCREEN.blit(C_Makanan, (95,332))
+    if 276+136 > mouse[0] > 276 and 332+40 > mouse[1] > 332:
+        SCREEN.blit(C_Permainan, (276,332))
+    if 95+136 > mouse[0] > 95 and 400+40 > mouse[1] > 400:
+        SCREEN.blit(C_Pahlawan, (95,400))
+    if 276+136 > mouse[0] > 276 and 400+40 > mouse[1] > 400:
+        SCREEN.blit(C_Ibukota, (276,400))      
+    
+    pygame.display.update()
+    
+# Run the Title Screen    
 def main_menu():
     FPS = 60
     clock = pygame.time.Clock() 
