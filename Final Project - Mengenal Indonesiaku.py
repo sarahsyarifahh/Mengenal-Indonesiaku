@@ -130,7 +130,6 @@ def draw_game_a():
             text = LETTER_FONT.render(ltr, 1, GREY)
             SCREEN.blit(text, (x - text.get_width()/2, y - text.get_height()/2.5))
 
-    pygame.display.update()
 
 ################ Category B: PERMAINAN ################
 # Load word guess
@@ -227,7 +226,7 @@ def game_a():
     run = True
     while run:
         clock.tick(FPS)
-        draw_game_c()
+        draw_game_a()
         pygame.mixer.music.stop()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -245,18 +244,23 @@ def game_a():
                             guessed.append(ltr)
                             if ltr not in word_makanan:
                                 panjatpinang_status += 1
+
         won = True
         for letter in word_makanan:
             if letter not in guessed:
                 won = False
-                
+        
         if won:
             SCREEN.blit(bgwin,(0,0))
+            pygame.time.delay(3000)
             win_sound.play()
+            pygame.display.update()
 
         if panjatpinang_status == 4:
             SCREEN.blit(bglose,(0,0))
-            lose_sound.play() 
+            pygame.time.delay(3000)
+            lose_sound.play()
+            pygame.display.update()
 
         pygame.display.update()
 
@@ -294,11 +298,15 @@ def game_b():
                 
         if won:
             SCREEN.blit(bgwin,(0,0))
+            pygame.time.delay(3000)
             win_sound.play()
+            pygame.display.update()
 
         if panjatpinang_status == 4:
             SCREEN.blit(bglose,(0,0))
+            pygame.time.delay(3000)
             lose_sound.play()
+            pygame.display.update()
 
         pygame.display.update() 
 
@@ -336,11 +344,15 @@ def game_c():
                 
         if won:
             SCREEN.blit(bgwin,(0,0))
+            pygame.time.delay(3000)
             win_sound.play()
+            pygame.display.update()
 
         if panjatpinang_status == 4:
             SCREEN.blit(bglose,(0,0))
-            lose_sound.play() 
+            pygame.time.delay(3000)
+            lose_sound.play()
+            pygame.display.update()
 
         pygame.display.update() 
 
@@ -378,20 +390,22 @@ def game_d():
                 
         if won:
             SCREEN.blit(bgwin,(0,0))
+            pygame.time.delay(3000)
             win_sound.play()
+            pygame.display.update()
 
         if panjatpinang_status == 4:
             SCREEN.blit(bglose,(0,0))
+            pygame.time.delay(3000)
             lose_sound.play()
+            pygame.display.update()
             
-
         pygame.display.update() 
 
 
 ####################################### TITLE SCREEN  : RUN THE CODE #######################################
 
 def main_menu():
-    global panjatpinang_status
     FPS = 60
     clock = pygame.time.Clock() 
     run = True
